@@ -6,11 +6,11 @@
 
 void print_alphabet_x10(void)
 {
-	int num = 0;
-	char ch = 'a';
+	int num = 0, ch;
 
 	while (num < 10)
 	{
+		ch = 'a';
 		while (ch <= 'z')
 		{
 			_putchar(ch);
@@ -18,6 +18,15 @@ void print_alphabet_x10(void)
 		}
 		_putchar('\n');
 		num++;
+	}	
+}
+ ilphabet_x10.c
+
+	 
+ * Return: Alawys 0 (Success)
+ */
+
+int main(void)
 	}
 
 }
