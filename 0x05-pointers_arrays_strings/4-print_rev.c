@@ -8,15 +8,15 @@
 
 void print_rev(char *s)
 {
-	int count;
-	int tmp;
+	int count = 0, tmp;
 
 	while (*s != '\n')
 	{
 		count++;
 		s++;
+
 	}
-	
+
 	tmp = count;
 
 	while (*(s + tmp) != *s)
