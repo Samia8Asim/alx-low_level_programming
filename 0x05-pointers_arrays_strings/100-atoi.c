@@ -10,15 +10,17 @@
 
 int _atoi(char *s)
 {
-	int n = 0, i;
-	int inte;
+	unsigned int num = 0;
+	int sign = 1;
 
-	while (s[n])
-		n++;
+	do {
+		if (*s == '-')
+			sign = -1;
+		else if (*s >= '0' && *s <= '9')
+			num = num * 10 + (*s - '0');
+		else if (num > 0)
+			break;
+	} while (*s++);
 
-	for (i = 0; i < n; i++)
-	{
-		inte = inte * 10 + (s[i] - 48);
-	}
-	return (inte);
+	return (num * sign);
 }
