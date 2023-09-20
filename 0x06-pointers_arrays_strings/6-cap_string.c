@@ -31,7 +31,7 @@ int isDelimiter(char c)
 
 char *cap_string(char *cstr)
 {
-	int i;
+	int i = 1;
 	char *str = cstr;
 
 	for (i = 0; str[i] != '\0'; i++)
