@@ -9,7 +9,7 @@
  */
 int lower(char ch)
 {
-	return (ch >= 97 && ch <= 122);
+	return (ch >= 'a' && ch <= 'z');
 }
 
 /**
@@ -23,9 +23,9 @@ int lower(char ch)
 int isDelimiter(char c)
 {
 	int i;
-	char delimiter[] = "\n\t,.;!?\"(){}";
+	char delimiter[] = "\n\t,.; !?\"(){}";
 
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 13; i++)
 	{
 		if (c == delimiter[i])
 			return (1);
