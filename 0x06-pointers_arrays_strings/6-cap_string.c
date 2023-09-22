@@ -1,6 +1,18 @@
 #include "main.h"
 
 /**
+ * lower - checks if lowercase
+ *
+ * @ch: input character
+ *
+ * Return: i if true and 0 if false
+ */
+int lower(char ch)
+{
+	return (ch >= 97 && ch <= 122);
+}
+
+/**
  * isDelimiter - checks for delimiters in a string
  *
  * @c: input string
@@ -34,22 +46,18 @@ char *cap_string(char *cstr)
 	int i = 1;
 	char *str = cstr;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (*cstr)
 	{
-		if (i == 0)
+		if (isDelimiter(*cstr))
+			i = 1;
+		else if (lower(*cstr) && i)
 		{
-			if (str[i] >= 'a' && str[i] <= 'z')
-				str[i] = str[i] - 32;
-			continue;
+			*cstr -= 32;
+			i = 0;
 		}
-
-		if (isDelimiter(str[i]))
-		{
-			++i;
-			if (str[i] >= 'a' && str[i] <= 'z')
-				str[i] = str[i] - 32;
-			continue;
-		}
+		else
+			i = 0;
+		cstr++;
 	}
 	return (str);
 }
