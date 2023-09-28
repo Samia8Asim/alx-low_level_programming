@@ -17,7 +17,7 @@ int leng(char *s)
 }
 
 /**
- * is_palindrome - function that returns 1 if a string is palindrom and 0 if not
+ * is_palindrome - function that returns 1 if a string is palindrom & 0 if not
  *
  * @s: input string
  *
@@ -28,7 +28,7 @@ int is_palindrome(char *s)
 {
 	int endofs = leng(s);
 
-	return (check_is_palindrome(s, 0, endofs - 1,endofs % 2));
+	return (check_is_palindrome(s, 0, endofs - 1, endofs % 2));
 }
 
 /**
@@ -47,8 +47,8 @@ int check_is_palindrome(char *s, int st, int endofs, int m)
 	if ((st == endofs && m != 0) || (st == endofs + 1 && m == 0))
 		return (1);
 	else if (s[st] != s[endofs])
-		return(0);
+		return (0);
 	else
 		return (check_is_palindrome(s, st + 1, endofs - 1, m));
 }
- 
+
