@@ -28,7 +28,7 @@ int _sqr(int n, int num)
 {
 	if (num * num == n)
 		return (num);
-	if else (num * num < n)
+	else if (num * num < n)
 		return (_sqr(n, num + 1));
 	else
 		return (-1);
