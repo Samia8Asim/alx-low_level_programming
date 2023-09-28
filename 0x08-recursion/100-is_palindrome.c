@@ -3,17 +3,21 @@
 /**
  * leng - find length of string
  *
+ * @st: start of s
+ * @endofs: end of s
+ * @m: modulas
  * @s: input string
  *
  * Return: length of string
  */
-
+int check_is_palindrome(char *s, int st, int endofs, int m);
+int is_palindrome(char *s);
 int leng(char *s)
 {
 	int n = 0;
 
 	if (*s > '\0')
-		return (n += leng(n + 1) + 1);
+		return (n += leng(s + 1) + 1);
 }
 
 /**
@@ -38,8 +42,7 @@ int is_palindrome(char *s)
  * @st: start of string
  * @endofs: end of string
  * @m: modulas
- *
- * Return 1 if a string is a palindrome and 0 if not.
+ * Return: 1 if a string is a palindrome and 0 if not.
  */
 
 int check_is_palindrome(char *s, int st, int endofs, int m)
