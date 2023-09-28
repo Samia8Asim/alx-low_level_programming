@@ -17,7 +17,8 @@ int leng(char *s)
 	int n = 0;
 
 	if (*s > '\0')
-		return (n += leng(s + 1) + 1);
+		n += leng(s + 1) + 1;
+	return (n);
 }
 
 /**
