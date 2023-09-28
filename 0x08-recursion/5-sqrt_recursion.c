@@ -3,6 +3,7 @@
 /**
  * _sqrt_recursion - function that returns the natural square root of a number
  *
+ * @num: number to check if number is perfct square root start from 1
  * @n: input number
  *
  * Return: The natural square root of a number
