@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int coins_num, i, num;
-	int coins[5] = {1, 2, 5, 10, 25};
+	int coins[5] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 		return (printf("Error\n"), 1);
@@ -21,6 +21,11 @@ int main(int argc, char *argv[])
 	{
 		num = atoi(argv[1]);
 		coins_num = 0;
+		if (num > 100)
+		{
+			coins_num += 4;
+			num -= 100;
+		}
 		for (i = 4; i >= 0; i--)
 		{
 			if (num % coins[i] == 0)
@@ -31,6 +36,7 @@ int main(int argc, char *argv[])
 					coins_num++;
 				}
 			}
+
 		}
 		printf("%d\n", coins_num);
 	}
