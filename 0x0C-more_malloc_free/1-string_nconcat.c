@@ -23,18 +23,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 	for (len2 = 0; s2[len2] != '\0'; len2++)
 		;
-	sp = malloc(len1 + n + 1);
+	sp = malloc(n + 1 + len1);
 
 	if (sp == NULL)
 	{
 		return (NULL);
 	}
 	for (i = 0; s1[i] != '\0'; i++)
+	{
 		sp[i] = s1[i];
+	}
 	for (j = 0; s2[j] != '\0'; j++)
 	{
-		sp[i] = s2[j];
-		i++;
+		sp[i + j] = s2[j];
 	}
 	sp[i] = '\0';
 	return (sp);
