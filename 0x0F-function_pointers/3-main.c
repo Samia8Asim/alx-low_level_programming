@@ -1,7 +1,7 @@
 #include "3-calc.h"
 
 /**
- * main - entry point 
+ * main - entry point
  * @ac: number of argument
  * @av: string array of argument
  *
@@ -24,5 +24,5 @@ int main(int ac, char **av)
 		printf("Error\n"), exit(100);
 
 	printf("%d\n", op_func(a, b));
-	return(0);
+	return (0);
 }
