@@ -8,13 +8,12 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	int i;
+	unsigned int i;
 	va_list args;
 
 	if (!n)
 	{
 		printf("\n");
-		return;
 	}
 	va_start(args, n);
 	for (i = 0; i < n; i++)
@@ -23,5 +22,4 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		     i ? (separator ? separator : "") : "\n");
 	}
 	va_end(args);
-	return (args);
 }
