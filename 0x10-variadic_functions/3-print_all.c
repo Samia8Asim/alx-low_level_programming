@@ -27,7 +27,7 @@ void intf(char *s, va_list argp)
  */
 void floatf(char *s, va_list argp)
 {
-	printf("%s%f", s, va_arg(argp, double);
+	printf("%s%f", s, va_arg(argp, double));
 }
 
 /**
