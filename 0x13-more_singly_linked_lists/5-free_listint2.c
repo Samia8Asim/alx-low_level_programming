@@ -6,7 +6,7 @@
  */
 void free_listint2(listint_t **head)
 {
-	listint_t copy_head, temp_node;
+	listint_t *copy_head, *temp_node;
 
 	if (!head)
 		return;
