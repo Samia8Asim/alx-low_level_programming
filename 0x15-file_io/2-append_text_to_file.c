@@ -1,6 +1,25 @@
 #include "main.h"
 
 /**
+ * strLen - fing length of a string
+ * @str: input string
+ *
+ * Return: length of string
+ */
+int strLen(char *str)
+{
+	int len = 0;
+
+	if (!str)
+		return (0);
+	while (*str)
+	{
+		len++;
+		str++;
+	}
+	return (len);
+}
+/**
  * append_text_to_file - ppends text at the end of a file.
  * @filename: the name of input file
  * @text_content: text_content to append to file
