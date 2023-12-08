@@ -24,29 +24,24 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new;
 		return (new);
 	}
-	while (current != NULL)
+
+	while (current != NULL && count < idx)
 	{
-		if (idx == count)
-		{
-			new->next = current;
-			new->prev = prev;
-			if (prev != NULL)
-				prev->next = new;
-			if (current != NULL)
-				current->prev = new;
-			return (new);
-		}
-		count++;
 		prev = current;
 		current = current->next;
+		count++;
 	}
-	if (idx == count)
+	if (count < idx)
 	{
-		new->next = NULL;
-		new->prev = prev;
-		if (prev != NULL)
-			prev->next = new;
-		return (new);
+		free(new);
+		return (NULL);
 	}
-	return (NULL);
+
+	new->prev = prev;
+	new->next = current;
+	if (prev != NULL)
+		prev->next = new;
+	if (current != NULL)
+		current->prev = new;
+	return (new);
 }
