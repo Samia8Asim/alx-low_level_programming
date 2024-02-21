@@ -26,10 +26,10 @@ gcc --version
 make --version
 ```
 If you don’t have them, you can install them by following the instructions on their respective websites:
-[gcc](https://github.com/Brainstorma/alx-low_level_programming/blob/master/0x1C-makefiles/README.md)
+[gcc](https://www.geeksforgeeks.org/how-to-install-gcc-compiler-on-linux/) 
 [make](https://www.geeksforgeeks.org/how-to-install-make-on-ubuntu/)
 
-##Usage
+## Usage
 
 To compile a C program using a **Makefile**, you need to place the **Makefile** and the source files in the same directory. Then, you can run the **make** command with the name of the executable file as an argument. For example, if you want to compile a program called hello.c and generate an executable file called hello, you can use the following Makefile:
 ```bash
@@ -102,7 +102,7 @@ make bye
 ```
 This will compile the **bye.c** file and create the **bye** executable file.
 
-##Tasks
+## Tasks
 
 This project consists of several tasks that require you to write different Makefiles with different variables, rules, and dependencies. You will learn how to use the **make** command, the **.PHONY** rule, the **all**, **clean**, **oclean**, **fclean**, and **re** rules, the **$(RM)** variable, and the **-Wall**, **-Werror**, **-Wextra**, and **-pedantic** flags.
 
@@ -116,6 +116,6 @@ The tasks are as follows:
 * 5.[Island Perimeter](https://github.com/Samia8Asim/alx-low_level_programming/blob/master/0x1C-makefiles/5-island_perimeter.py): Write a Python function that returns the perimeter of an island described by a grid.
 
 
-##Contributing
+## Contributing
 
 This project is part of the alx program, which is a software engineering training program that aims to empower young Africans with the skills and mindset to succeed in the digital age. If you are interested in joining the program or learning more about it, you can visit their website or contact them at info@alx.app.
